@@ -1,0 +1,11 @@
+<h1>Movies</h1>
+<% @movies.each do |movie| %>
+<h2><%= movie.title %> (<%= movie.year %>)</h2>
+<p><%= movie.summary %></p>
+<% end %>
+
+<%= content_for :javascript do %>
+<%= javascript_tag do %>
+MoviesApp.initialize({ movies: <%= @movies.to_json %> });
+<% end %> 
+<% end %>
