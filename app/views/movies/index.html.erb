@@ -4,8 +4,22 @@
 <p><%= movie.summary %></p>
 <% end %>
 
-<%= content_for :javascript do %>
-<%= javascript_tag do %>
+<!--
+<script>
 MoviesApp.initialize({ movies: <%= @movies.to_json %> });
-<% end %> 
-<% end %>
+</script>
+-->
+
+<script type="text/json" id="bootstrap">
+  {
+    "movies": <%= @movies.to_json %>
+  }
+</script>
+<script>
+  $(function () {
+    var div = $('<div></div>');
+    div.html($('#bootstrap').text());
+    var data = JSON.parse(div.text());
+    MoviesApp.initialize(data);
+  });
+</script>
