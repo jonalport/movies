@@ -1,0 +1,16 @@
+<%= form_tag("/movies/search", :method => "get", id: "search-form") do %>
+  <%= text_field_tag :search, params[:search], placeholder: "Search RT" %>
+  <%= submit_tag "Search", :name => nil %>
+<% end %>
+
+<% if @message %>
+<%= @message %>
+<% end %>
+
+<% if @movies %>
+<% @movies.each do |movie| %>
+<div>
+<%= movie %>
+</div>
+<% end %>
+<% end %>
