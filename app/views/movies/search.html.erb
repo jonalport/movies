@@ -10,7 +10,7 @@
 <% if @movies %>
 <% @movies.each do |movie| %>
 <div>
-<%= movie %>
+<%= movie[:title] %> (<%= movie[:year] %>)
 </div>
 <% end %>
 <% end %>

@@ -10,9 +10,9 @@ class MoviesController < ApplicationController
   def search
     if params[:search]
       Rotten.api_key = ENV["rt_api_key"]
-      response = RottenMovie.find(:title => params[:search], :limit => 10, :expand_results => false)
+      response = RottenMovie.find(:title => params[:search], :limit => 20, :expand_results => false)
 
-      @movies = {}
+      @movies = []
       i = 0
 
       response.each do |movie|
