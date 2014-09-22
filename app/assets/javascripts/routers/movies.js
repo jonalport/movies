@@ -3,17 +3,19 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
   routes: {
     "": "index",
     "movies": "movies",
-    "movies/watched": "watched",
+    "seen": "seen",
+    "search": "search",
+    "wishlist": "wishlist",
     "movies/:id": "show"
   },
 
   // Show some interesting movies
   index: function() {
-    var indexEl = $("body").get(0);
+    // var indexEl = $("body").get(0);
     // console.log(el);
     var view = new MoviesApp.Views.MoviesIndex({ collection: MoviesApp.movies });
     // view.setElement(indexEl);
-    $('body').html(view.render().$el);
+    $('.content').html(view.render().$el);
   },
 
   // Movie details
@@ -22,8 +24,17 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
   },
 
   // List movies user as marked as watched
-  watched: function() {
+  seen: function() {
     console.log("All that I've seen");
+  },
+
+  wishlist: function() {
+    console.log("All that I want to see");
+  },
+
+  search: function() {
+    var view = new MoviesApp.Views.SearchView({});
+    $('.content').html(view.render().$el);
   }
 
 });

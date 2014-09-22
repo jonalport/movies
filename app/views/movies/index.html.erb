@@ -1,15 +1,3 @@
-<h1>Movies</h1>
-<% @movies.each do |movie| %>
-<h2><%= movie.title %> (<%= movie.year %>)</h2>
-<p><%= movie.summary %></p>
-<% end %>
-
-<!--
-<script>
-MoviesApp.initialize({ movies: <%= @movies.to_json %> });
-</script>
--->
-
 <script type="text/json" id="bootstrap">
   {
     "movies": <%= @movies.to_json %>

@@ -25,7 +25,10 @@ class MoviesController < ApplicationController
         i += 1
       end
 
-      # pp movies.to_json      
+      respond_to do |format|
+        format.html
+        format.json { render json: @movies }
+      end
 
     end
   end

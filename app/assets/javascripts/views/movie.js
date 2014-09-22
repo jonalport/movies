@@ -6,7 +6,7 @@ MoviesApp.Views.MovieView = Backbone.View.extend({
 
   initialize: function() {
     // console.log('Movie view');
-    console.log(this.el);
+    // console.log(this.el);
   },
 
   id: function() {
