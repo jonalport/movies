@@ -1,4 +1,4 @@
-MoviesApp.Views.MoviesIndex = Backbone.View.extend({
+MoviesApp.Views.MoviesIndexView = Backbone.View.extend({
   
   id: "movie-list",
 

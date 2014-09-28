@@ -8,10 +8,19 @@ MoviesApp.Views.SearchView = Backbone.View.extend({
   },
 
   events: {
+    "click #search-button": "doSearch"
   },
 
   render: function() {
     this.$el.html(JST['movies/search']({}));
     return this;
   },
+
+  doSearch: function() {
+    var query = $("#search-input").val();
+    if(query == '') {
+      return false;
+    }
+    
+  }
 });

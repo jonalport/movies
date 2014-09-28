@@ -5,7 +5,7 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
     "movies": "movies",
     "seen": "seen",
     "search": "search",
-    "wishlist": "wishlist",
+    "want": "want",
     "movies/:id": "show"
   },
 
@@ -13,7 +13,7 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
   index: function() {
     // var indexEl = $("body").get(0);
     // console.log(el);
-    var view = new MoviesApp.Views.MoviesIndex({ collection: MoviesApp.movies });
+    var view = new MoviesApp.Views.MoviesIndexView({ collection: MoviesApp.movies });
     // view.setElement(indexEl);
     $('.content').html(view.render().$el);
   },
@@ -28,7 +28,7 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
     console.log("All that I've seen");
   },
 
-  wishlist: function() {
+  want: function() {
     console.log("All that I want to see");
   },
 
