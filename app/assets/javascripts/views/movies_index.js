@@ -4,7 +4,6 @@ MoviesApp.Views.MoviesIndexView = Backbone.View.extend({
 
   render: function() {
     var self = this;
-
     this.$el.html(JST['movies/index']());
 
     this.collection.each(function(movie) {

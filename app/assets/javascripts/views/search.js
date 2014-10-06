@@ -5,6 +5,7 @@ MoviesApp.Views.SearchView = Backbone.View.extend({
   // id: "movie-id",
 
   initialize: function() {
+    var resultsView = new MoviesApp.Views.ResultsView({ model: this.model });
   },
 
   events: {
@@ -18,9 +19,14 @@ MoviesApp.Views.SearchView = Backbone.View.extend({
 
   doSearch: function() {
     var query = $("#search-input").val();
-    if(query == '') {
+    
+    if(query == "") {
+      console.log("Empty search string")
       return false;
     }
-    
+    // Get values of selected options, use them to construct Ajax query. 
+    // Also toggle 'selected' CSS classes on selected inputs here?
+    var options = query; // make this an obj literal?
+    this.model.performSearch(options);
   }
 });

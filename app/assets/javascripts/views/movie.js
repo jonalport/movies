@@ -9,6 +9,7 @@ MoviesApp.Views.MovieView = Backbone.View.extend({
     // console.log(this.el);
   },
 
+  // Function-based id
   id: function() {
     return "movie-" + this.model.id;
   },
