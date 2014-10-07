@@ -13,7 +13,12 @@ MoviesApp.Views.SearchView = Backbone.View.extend({
   },
 
   render: function() {
-    this.$el.html(JST['movies/search']({}));
+    this.$el.html(JST["movies/search"]({}));
+
+    $(function() {
+      $("body").addClass("page-search");
+      $("input[type=text]").focus();
+    });
     return this;
   },
 

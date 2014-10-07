@@ -1,0 +1,60 @@
+// http://www.colourlovers.com/palette/164079/CMYK_Parrot
+
+.page-search {
+  background: #3F3F3F;
+  padding-top: 50px;
+
+  .search {
+    overflow: hidden;
+  }
+
+  #search-input,
+  #search-button {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+  }
+  .input,
+  #search-button {
+    display: block;
+    float: left;
+    cursor: pointer;
+
+    &:hover {
+      background: #D80351;
+    }
+  }
+  .input {
+    width: 70%;
+    height: 50px;
+    // background: #FFF;
+  }
+  #search-input {
+    width: 100%;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;  
+    background: #FFF;
+    display: block;
+    padding: 0 4%;
+    float: left;
+    // margin: 0 auto;
+    // display: block;
+  }
+  #search-button {
+    width: 30%;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background: #00A3EE;
+    color: #FFF;
+  }
+  #search-results {
+    background: #DDD;
+    min-height: 100px;
+  }
+}
