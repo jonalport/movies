@@ -1,0 +1,5 @@
+<% collection.each(function(movie) { %>
+<li style="background-image: url('<%= movie.escape("poster") %>');">
+  <div class="title"><%= movie.escape("title") %></div>
+</li>
+<% }); %>

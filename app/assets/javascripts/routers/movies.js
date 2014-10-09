@@ -15,7 +15,7 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
     // console.log(el);
     var view = new MoviesApp.Views.MoviesIndexView({ collection: MoviesApp.movies });
     // view.setElement(indexEl);
-    $('.content').html(view.render().$el);
+    $(".content").html(view.render().$el);
   },
 
   // Movie details
@@ -35,6 +35,6 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
   search: function() {
     var searchModel = new SearchModel();
     var view = new MoviesApp.Views.SearchView({ model: searchModel });
-    $('.content').html(view.render().$el); // Render search form
+    $(".content").html(view.render().$el); // Render search form
   }
 });

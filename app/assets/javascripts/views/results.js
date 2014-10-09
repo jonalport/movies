@@ -3,23 +3,24 @@ MoviesApp.Views.ResultsView = Backbone.View.extend({
   id: "results-list",
 
   initialize: function() {
-    this.model.on("change:searchResults", this.displayResults, this);
+    // this.model.on("change:searchResults", this.displayResults, this);
   },
   displayResults: function(model, results) {
     //append results to results-list here.   
-    console.log(results);
-    // $('#search-results').html(this.render().$el); // Render search form
+    // console.log(results);
+    $('#search-results').html(this.render(results).$el); // Render search form
   },
-  render: function() {
+  render: function(results) {
     var self = this;
+    // console.log(results);
+    // this.$el.html(JST['movies/results'](results));
 
-    // To do: render the results (update below code)!
+    console.log("Rendering results");
 
-    // this.$el.html(JST['movies/results']());
-
-    // this.collection.each(function(movie) {
+    // this.results.each(function(result) {
     //   var movieView = new MoviesApp.Views.MovieView({ model: movie });
     //   self.$('table').append(movieView.render().el);
+    //   console.log(result);
     // });
 
     return this;
