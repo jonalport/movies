@@ -33,8 +33,7 @@ MoviesApp.Routers.Movies = Backbone.Router.extend({
   },
 
   search: function() {
-    var searchModel = new SearchModel();
-    var view = new MoviesApp.Views.SearchView({ model: searchModel });
+    var view = new MoviesApp.Views.SearchView();
     $(".content").html(view.render().$el); // Render search form
   }
 });
